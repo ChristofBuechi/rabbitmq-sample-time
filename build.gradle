@@ -1,0 +1,29 @@
+group 'christofbuechi.ch'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src'
+        }
+    }
+
+
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'com.rabbitmq:amqp-client:4.0.1'
+    compile 'org.slf4j:slf4j-parent:1.7.22'
+    compile 'org.slf4j:slf4j-site:1.7.22'
+    compile 'org.slf4j:slf4j-simple:1.7.22'
+}
